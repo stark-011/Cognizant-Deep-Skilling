@@ -1,0 +1,19 @@
+Flask route parameters allow values from the URL to be passed into a view function.
+
+Examples:
+
+- `/student/Barani` passes `Barani` as a string parameter.
+- `/marks/95` passes `95` as an integer parameter when the route uses `<int:mark>`.
+
+Query parameters are read from `request.args`.
+
+Example:
+
+```python
+from flask import request
+
+@app.route("/search")
+def search():
+    keyword = request.args.get("q")
+    return f"Searching for {keyword}"
+```

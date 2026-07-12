@@ -1,0 +1,1 @@
+"""Students Django application package."""
